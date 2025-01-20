@@ -3,7 +3,6 @@ import { ClerkProvider } from "@clerk/nextjs";
 
 import "./globals.css";
 import ClientWrapper from "./_components/shared-components/ClientWrapper";
-import { Toaster } from "@/components/ui/sonner";
 
 
 const inter = Inter({subsets: ['latin']});
@@ -29,12 +28,6 @@ export default function RootLayout({ children }) {
             {children}
 
           </ClientWrapper>
-
-          <Toaster 
-            richColors
-            position='bottom-center'
-            theme='light'
-          />
           
         </body>
 

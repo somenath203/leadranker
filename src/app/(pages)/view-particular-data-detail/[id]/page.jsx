@@ -21,7 +21,6 @@ import { FaRegClipboard } from "react-icons/fa";
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw';
-import { toast } from 'sonner';
 import { RiFileExcel2Fill } from "react-icons/ri";
 import { v4 as uuidv4 } from 'uuid';
 
@@ -139,10 +138,6 @@ const Page = () => {
             });
           }, 100); 
 
-          toast.success('Lead Insights generated successfully', {
-            duration: 4000
-          });
-
         }
         
       }
@@ -150,10 +145,6 @@ const Page = () => {
     } catch (error) {
       
       console.error(error);
-
-      toast.error('Something went wrong while generating leads. Try again later', {
-        duration: 8000
-      });
     
     } finally {
 
@@ -210,10 +201,6 @@ const Page = () => {
 
         setGeneratedEmail(data?.result);
 
-        toast.success('Personalized email generated successfully.', {
-          duration: 4000
-        });
-
       }
       
     } catch (error) {
@@ -221,10 +208,6 @@ const Page = () => {
       console.log(error);
 
       setOpenEmailDialogBox(false);
-      
-      toast.error('Something went wrong while generating the email.', {
-        duration: 8000
-      });
       
     } finally {
       
@@ -240,10 +223,6 @@ const Page = () => {
     if (generatedEmail) {
 
       navigator.clipboard.writeText(generatedEmail);
-
-      toast.success('Email successfully copied to clipboard.', {
-        duration: 4000
-      });
 
     }
 
@@ -284,13 +263,7 @@ const Page = () => {
   
       saveAs(blob, `leads-${uuidv4()}.csv`);
 
-    } else {
-
-      toast.error('No data available to download as CSV.', {
-        duration: 4000,
-      });
-
-    }
+    } 
 
   };
   

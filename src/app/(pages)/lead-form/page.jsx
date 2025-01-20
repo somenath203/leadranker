@@ -7,7 +7,6 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { ImSpinner9 } from "react-icons/im";
 import { useRouter } from 'next/navigation';
-import { toast } from 'sonner';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -102,17 +101,11 @@ const Page = () => {
 
       if(data?.success) {
 
-        toast.success('Your leads are ready.', {
-          duration: 4000
-        });
-
         router.push(`view-particular-data-detail/${data?.userData?.id}`);
         
       }
 
     } catch (error) {
-
-      toast.error('Something went wrong. Please try again.');
 
       console.log(error);
 
