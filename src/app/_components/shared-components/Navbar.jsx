@@ -32,14 +32,14 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="py-5 px-10 flex justify-between items-center">
+      <nav className="py-5 px-10 flex flex-col gap-4 lg:gap-0 lg:flex-row justify-between items-center">
 
         <Link href='/' className="text-2xl font-bold flex items-center justify-center gap-2">
           <MdLeaderboard className="text-orange-500 text-4xl" />
           LeadRanker
         </Link>
 
-        <div className='flex items-center justify-center gap-3'>
+        <div className='flex flex-col lg:flex-row items-center justify-center gap-3'>
 
           <SignedIn>
 
@@ -61,49 +61,53 @@ const Navbar = () => {
 
           </SignedIn>
 
-          <Button variant="secondary" onClick={() => setOpenAboutusDialogBox(true)}>About</Button>
+          <div className='flex items-center justify-center gap-2'>
 
-          <DropdownMenu>
+            <Button variant="secondary" onClick={() => setOpenAboutusDialogBox(true)}>About</Button>
 
-            <DropdownMenuTrigger asChild>
+            <DropdownMenu>
 
-              <Button variant="outline" size="icon">
+              <DropdownMenuTrigger asChild>
 
-                {theme === "light" && (
-                  <CiSun className="h-[1.2rem] w-[1.2rem] transition-all" />
-                )}
+                <Button variant="outline" size="icon">
 
-                {theme === "dark" && (
-                  <FaMoon className="h-[1.2rem] w-[1.2rem] transition-all" />
-                )}
+                  {theme === "light" && (
+                    <CiSun className="h-[1.2rem] w-[1.2rem] transition-all" />
+                  )}
 
-                {theme === "system" && (
-                  <FiMonitor className="h-[1.2rem] w-[1.2rem] transition-all" />
-                )}
+                  {theme === "dark" && (
+                    <FaMoon className="h-[1.2rem] w-[1.2rem] transition-all" />
+                  )}
 
-                <span className="sr-only">Toggle theme</span>
+                  {theme === "system" && (
+                    <FiMonitor className="h-[1.2rem] w-[1.2rem] transition-all" />
+                  )}
 
-              </Button>
+                  <span className="sr-only">Toggle theme</span>
 
-            </DropdownMenuTrigger>
+                </Button>
 
-            <DropdownMenuContent align="end">
+              </DropdownMenuTrigger>
 
-              <DropdownMenuItem onClick={() => setTheme("light")}>
-                Light
-              </DropdownMenuItem>
+              <DropdownMenuContent align="end">
 
-              <DropdownMenuItem onClick={() => setTheme("dark")}>
-                Dark
-              </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setTheme("light")}>
+                  Light
+                </DropdownMenuItem>
 
-              <DropdownMenuItem onClick={() => setTheme("system")}>
-                System
-              </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setTheme("dark")}>
+                  Dark
+                </DropdownMenuItem>
 
-            </DropdownMenuContent>
-              
-          </DropdownMenu>
+                <DropdownMenuItem onClick={() => setTheme("system")}>
+                  System
+                </DropdownMenuItem>
+
+              </DropdownMenuContent>
+                
+            </DropdownMenu>
+
+          </div>
 
           <SignedIn>
               

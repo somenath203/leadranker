@@ -7,7 +7,6 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { ImSpinner9 } from "react-icons/im";
 import { useRouter } from 'next/navigation';
-import { useTheme } from 'next-themes';
 import { toast } from 'sonner';
 
 import { Button } from '@/components/ui/button';
@@ -40,9 +39,6 @@ const Page = () => {
 
 
   const [ loading, setLoading ] = useState(false);
-
-  const { theme } = useTheme();
-
 
   const router = useRouter();
 
@@ -138,11 +134,11 @@ const Page = () => {
           
           <CardHeader>
             
-            <CardTitle className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent">
+            <CardTitle className="text-xl lg:text-2xl text-center lg:text-left font-bold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent">
               Find Your Perfect Leads
             </CardTitle>
 
-            <CardDescription>
+            <CardDescription className='text-center lg:text-left'>
               Fill in the details below to discover targeted leads matching your
               criteria.
             </CardDescription>
@@ -159,7 +155,6 @@ const Page = () => {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                  {/* Job Title/Role */}
                   <FormField
                     control={form.control}
                     name="jobTitle"
@@ -186,7 +181,6 @@ const Page = () => {
                     )}
                   />
 
-                  {/* Required Skills/Technologies */}
                   <FormField
                     control={form.control}
                     name="skills"
@@ -214,7 +208,7 @@ const Page = () => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  {/* Experience Level */}
+
                   <FormField
                     control={form.control}
                     name="experienceLevel"
@@ -283,7 +277,7 @@ const Page = () => {
 
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Activity Timeline */}
+
                   <FormField
                     control={form.control}
                     name="activityTimeline"
@@ -327,7 +321,6 @@ const Page = () => {
                     )}
                   />
 
-                  {/* Number of Leads Required */}
                   <FormField
                     control={form.control}
                     name="numberOfLeads"
@@ -353,7 +346,6 @@ const Page = () => {
                   />
                 </div>
 
-                {/* Submit Button */}
                 <Button
                   type="submit"
                   disabled={loading}

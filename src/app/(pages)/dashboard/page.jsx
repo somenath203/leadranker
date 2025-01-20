@@ -60,7 +60,7 @@ const Page = () => {
   return (
     <div className="px-8 py-4">
 
-      <h1 className="text-2xl font-bold mb-6">Dashboard</h1>
+      <h1 className="text-xl lg:text-2xl text-center lg:text-left font-bold mb-6">Dashboard</h1>
 
       {loading ? (
 

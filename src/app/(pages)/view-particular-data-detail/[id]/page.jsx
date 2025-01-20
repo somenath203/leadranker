@@ -344,9 +344,9 @@ const Page = () => {
 
   return (
     <>
-      <div className="px-8 py-6">
+      <div className="px-2 lg:px-8 py-3 lg:py-6">
 
-        <h1 className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 bg-clip-text mb-6">
+        <h1 className="text-2xl lg:text-3xl text-center lg:text-left font-extrabold text-transparent bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 bg-clip-text mb-6">
           GitHub Data Details
         </h1>
 
@@ -355,7 +355,7 @@ const Page = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-col lg:flex-row items-center gap-4">
 
               <div className="p-3 bg-orange-500 text-white rounded-full">
                 <AiOutlineFileText size={24} />
@@ -363,11 +363,11 @@ const Page = () => {
 
               <div>
 
-                <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+                <h2 className="text-lg text-center lg:text-left font-semibold text-gray-800 dark:text-gray-100">
                   Job Title
                 </h2>
 
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 text-center lg:text-left dark:text-gray-300">
                   {jobTitle || 'N/A'}
                 </p>
 
@@ -376,7 +376,7 @@ const Page = () => {
             </div>
 
 
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-col lg:flex-row items-center gap-4">
 
               <div className="p-3 bg-purple-500 text-white rounded-full">
                 <AiOutlineCode size={24} />
@@ -384,11 +384,11 @@ const Page = () => {
 
               <div>
 
-                <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+                <h2 className="text-lg text-center lg:text-left font-semibold text-gray-800 dark:text-gray-100">
                   Skills
                 </h2>
 
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 text-center lg:text-left dark:text-gray-300">
                   {skills || 'N/A'}
                 </p>
 
@@ -397,7 +397,7 @@ const Page = () => {
             </div>
 
 
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-col lg:flex-row items-center gap-4">
 
               <div className="p-3 bg-blue-500 text-white rounded-full">
                 <AiOutlineEnvironment size={24} />
@@ -405,11 +405,11 @@ const Page = () => {
 
               <div>
 
-                <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+                <h2 className="text-lg text-center lg:text-left font-semibold text-gray-800 dark:text-gray-100">
                   Location
                 </h2>
 
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 text-center lg:text-left dark:text-gray-300">
                   {location || 'N/A'}
                 </p>
 
@@ -418,7 +418,7 @@ const Page = () => {
             </div>
 
 
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-col lg:flex-row items-center gap-4">
 
               <div className="p-3 bg-green-500 text-white rounded-full">
                 <AiOutlineClockCircle size={24} />
@@ -426,11 +426,11 @@ const Page = () => {
 
               <div>
 
-                <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+                <h2 className="text-lg text-center lg:text-left font-semibold text-gray-800 dark:text-gray-100">
                   Activity Timeline
                 </h2>
 
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 text-center lg:text-left dark:text-gray-300">
                   {activityTimeline || 'N/A'}
                 </p>
 
@@ -439,7 +439,7 @@ const Page = () => {
             </div>
 
 
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-col lg:flex-row items-center gap-4">
 
               <div className="p-3 bg-indigo-700 text-white rounded-full">
                 <IoMdPerson size={24} />
@@ -447,11 +447,11 @@ const Page = () => {
 
               <div>
 
-                <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+                <h2 className="text-lg text-center lg:text-left font-semibold text-gray-800 dark:text-gray-100">
                   Experience
                 </h2>
 
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 text-center lg:text-left dark:text-gray-300">
                   {experienceLevel || 'N/A'}
                 </p>
 
@@ -460,7 +460,7 @@ const Page = () => {
             </div>
 
 
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-col lg:flex-row items-center gap-4">
 
               <div className="p-3 bg-pink-500 text-white rounded-full">
                 <AiOutlineTeam size={24} />
@@ -468,11 +468,11 @@ const Page = () => {
 
               <div>
 
-                <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+                <h2 className="text-lg text-center lg:text-left font-semibold text-gray-800 dark:text-gray-100">
                   Number of Leads
                 </h2>
 
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 text-center lg:text-left dark:text-gray-300">
                   {numberOfLeads || 'N/A'}
                 </p>
 
@@ -487,9 +487,9 @@ const Page = () => {
 
         <div className="mt-10">
 
-          <div className='flex items-center justify-between mb-4'>
+          <div className='flex flex-col lg:flex-row items-center justify-center lg:justify-between mb-4'>
 
-            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            <h2 className="text-base lg:text-2xl font-bold text-center text-gray-800 dark:text-gray-100">
               Fetched GitHub Users Based on the Above Criteria
             </h2>
 
@@ -633,7 +633,7 @@ const Page = () => {
 
         {loadingGeneratingInsights ? <div className='mt-8 flex items-center gap-3'>
           
-          <FaSpinner className='text-4xl transition-all animate-spin duration-700 text-orange-500 dark:text-orange-400' />
+          <FaSpinner className='text-2xl lg:text-4xl transition-all animate-spin duration-700 text-orange-500 dark:text-orange-400' />
 
           <p className='text-orange-500 dark:text-orange-400'>Generating Insights...</p>
 
@@ -642,14 +642,14 @@ const Page = () => {
           onClick={generateGithubUserInsightsUsingGemini}
         >
           
-          <IoSparkles className='size-6' />
+          <IoSparkles className='text-5 lg:size-6' />
 
-          <span>Generate Insights</span>
+          <span className='text-sm lg:text-lg'>Generate Insights</span>
 
         </div>}
 
         {!loadingGeneratingInsights && generatedInsights && (
-          <div className="my-10 p-6 bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-900 shadow-lg rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="my-5 lg:my-10 p-2 lg:p-6 bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-900 shadow-lg rounded-lg border border-gray-200 dark:border-gray-700">
             
             <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 text-center">
               📊 Generated Insights
@@ -659,17 +659,18 @@ const Page = () => {
               Explore the detailed insights generated for the GitHub users. Interact and analyze the results in a structured and readable format.
             </p>
 
-            <div className="markdown px-4 py-6 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 transition-transform transform hover:scale-[1.02] hover:shadow-xl">
-              
-              <Markdown
-                remarkPlugins={[remarkGfm]}
-                rehypePlugins={[rehypeRaw]}
-                className='leading-8'
-              >
-                {generatedInsights}
-              </Markdown>
-
+            <div className="px-4 py-6 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 transition-transform transform hover:scale-[1.02] hover:shadow-xl break-words">
+              <div className="overflow-x-auto">
+                <Markdown
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeRaw]}
+                  className="max-w-full overflow-x-auto text-sm lg:text-lg text-center lg:text-left"
+                >
+                  {generatedInsights}
+                </Markdown>
+              </div>
             </div>
+
 
             <div className="flex justify-center mt-8">
               <Button
@@ -687,45 +688,41 @@ const Page = () => {
 
       <Dialog open={openEmailDialogBox} onOpenChange={setOpenEmailDialogBox}>
 
-        <DialogContent className="bg-gradient-to-br from-orange-50 via-white to-orange-100 dark:from-slate-900 dark:via-slate-800 dark:to-orange-950 shadow-lg rounded-lg px-4 py-6 sm:px-6 sm:py-8 max-w-full w-[90vw] sm:w-[80vw] lg:w-[50vw] max-h-[90vh] overflow-y-auto">
+        <DialogContent className="bg-gradient-to-br from-orange-50 via-white to-orange-100 dark:from-slate-900 dark:via-slate-800 dark:to-orange-950 shadow-lg rounded-lg px-6 py-8 max-h-[90vh] max-w-2xl overflow-y-auto">
           
           <DialogHeader>
-            
-            <DialogTitle className="text-left mt-4 text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent">
+
+            <DialogTitle className="text-left mt-4 text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent">
               About Us
             </DialogTitle>
-            
-            <p className="text-left font-semibold mt-3 text-slate-800 dark:text-slate-100 text-sm sm:text-base">
+
+            <p className="text-left font-semibold mt-3 text-slate-800 dark:text-slate-100">
               LeadRanker: Your Gateway to Targeted Leads
             </p>
-            
+
             <div className="mt-3 space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
               
-              {loadingGenerateEmails ? (
-                <FaSpinner className="text-lg lg:text-3xl transition-all animate-spin duration-700 text-orange-500 dark:text-orange-400" />
-              ) : (
-                <Markdown
-                  remarkPlugins={[remarkGfm]}
-                  rehypePlugins={[rehypeRaw]}
-                  className="leading-8"
-                >
-                  {generatedEmail}
-                </Markdown>
-              )}
-            
+              { loadingGenerateEmails ? <FaSpinner className='text-3xl transition-all animate-spin duration-700 text-orange-500 dark:text-orange-400' /> :  <Markdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+                className='leading-8'
+              >
+                { generatedEmail }
+
+              </Markdown> }
+
             </div>
-          
+
           </DialogHeader>
-          
-          {generatedEmail && (
+
+          {generatedEmail && <Button className='flex items-center gap-2 py-6' onClick={copyEmailToClipbaord}>
             
-            <Button className="flex items-center gap-2 py-6" onClick={copyEmailToClipbaord}>
-              <FaRegClipboard className="text-3xl text-white" />
-              <span className="text-lg text-white">Copy to clipboard</span>
-            </Button>
-          
-          )}
-        
+            <FaRegClipboard className='text-3xl text-white' />
+
+            <span className='text-lg text-white'>Copy to clipboard</span>
+
+          </Button>}
+
         </DialogContent>
 
       </Dialog>

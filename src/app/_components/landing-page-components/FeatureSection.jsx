@@ -10,7 +10,7 @@ import {
 
 const FeatureSection = () => {
   return (
-    <div className="py-20">
+    <div className="py-12 lg:py-20">
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
