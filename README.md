@@ -20,6 +20,7 @@ LeadRanker is a full-stack web application designed to help organizations and co
 - 📊 **Detailed Insights**: Generate detailed insights for the fetched leads using the Google Gemini API.
 - ✉️ **Personalized Email Generation**: Create personalized emails for each lead directly within the app.
 - 📂 **CSV Export**: Download the list of developer leads as a CSV file for easy offline access and sharing.
+- 🗑️ **Delete GitHub Data**: Users can delete specific GitHub data as needed.
 - 📋 **Dashboard**: View all the data created by the user in one place.
 - 🌗 **Light/Dark Mode Support**: Switch between light and dark themes for a better user experience.
 
