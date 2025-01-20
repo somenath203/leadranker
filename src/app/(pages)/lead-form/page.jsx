@@ -39,6 +39,8 @@ const Page = () => {
 
   const [ loading, setLoading ] = useState(false);
 
+  const [ error, setError ] = useState('');
+
   const router = useRouter();
 
 
@@ -90,6 +92,8 @@ const Page = () => {
 
       setLoading(true);
 
+      setError('');
+
       const { data } = await axios.post('/api/github-data', {
         jobTitle: values?.jobTitle,
         skills: values?.skills,
@@ -108,6 +112,8 @@ const Page = () => {
     } catch (error) {
 
       console.log(error);
+
+      setError('An error occurred while fetching data from the GitHub API with the specified requirements. Please try again with a different combination of inputs after some time.')
 
     } finally {
 
@@ -350,6 +356,8 @@ const Page = () => {
               </form>
 
             </Form>
+
+            { error && <p className='mt-3 text-center lg:text-left text-red-500 dark:text-red-300'>{error}</p> }
 
           </CardContent>
 

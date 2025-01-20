@@ -67,7 +67,9 @@ const Page = () => {
   const [ loadingGenerateEmails, setLoadingGenerateEmails ] = useState(false);
 
 
-  
+  const [ errorInsights, setErrorInsights ] = useState('');
+
+  const [ errorPersonalizedEmail, setErrorPersonalizedEmail ] = useState('');
 
 
   const fetchParticularGithubDataDetails = async () => {
@@ -104,6 +106,9 @@ const Page = () => {
     try {
 
       setLoadingGeneratingInsights(true);
+
+      setGeneratedInsights('');
+
 
       const { jobTitle, skills, activityTimeline, experienceLevel, githubData: githubUsers } = githubData;
   
@@ -145,6 +150,8 @@ const Page = () => {
     } catch (error) {
       
       console.error(error);
+
+      setErrorInsights('An error occurred while generating the personalized insights, or the Gemini API has reached its daily limit. Please try again later.');
     
     } finally {
 
@@ -162,6 +169,9 @@ const Page = () => {
       setLoadingGenerateEmails(true);
 
       setOpenEmailDialogBox(true);
+
+      setErrorPersonalizedEmail('');
+
 
       const { jobTitle, skills, experienceLevel } = githubData;
 
@@ -207,7 +217,7 @@ const Page = () => {
 
       console.log(error);
 
-      setOpenEmailDialogBox(false);
+      setErrorPersonalizedEmail('An error occurred while generating the personalized email, or the Gemini API has reached its daily limit. Please try again later.');
       
     } finally {
       
@@ -621,6 +631,12 @@ const Page = () => {
 
         </div>}
 
+        {!loadingGeneratingInsights && errorInsights && (
+          <p className='mt-4 text-left'>
+            {errorInsights}
+          </p>
+        )}
+
         {!loadingGeneratingInsights && generatedInsights && (
           <div className="my-5 lg:my-10 p-2 lg:p-6 bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-900 shadow-lg rounded-lg border border-gray-200 dark:border-gray-700">
             
@@ -666,16 +682,12 @@ const Page = () => {
           <DialogHeader>
 
             <DialogTitle className="text-left mt-4 text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent">
-              About Us
+              Your Email
             </DialogTitle>
-
-            <p className="text-left font-semibold mt-3 text-slate-800 dark:text-slate-100">
-              LeadRanker: Your Gateway to Targeted Leads
-            </p>
 
             <div className="mt-3 space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
               
-              { loadingGenerateEmails ? <FaSpinner className='text-3xl transition-all animate-spin duration-700 text-orange-500 dark:text-orange-400' /> :  <Markdown
+              { loadingGenerateEmails ? <FaSpinner className='text-3xl transition-all animate-spin duration-700 text-orange-500 dark:text-orange-400' /> : errorPersonalizedEmail ? <p>{errorPersonalizedEmail}</p> : <Markdown
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeRaw]}
                 className='leading-8'
