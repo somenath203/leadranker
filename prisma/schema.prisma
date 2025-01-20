@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model GithubData {
+  id                                      String   @id @default(uuid())
+  jobTitle                                String
+  skills                                  String
+  location                                String
+  activityTimeline                        String
+  experienceLevel                         String
+  numberOfLeads                           Int
+  githubData                              String
+  clerkIdOfTheUserWhoCreatedTheGithubData String
+  createdAt                               DateTime @default(now())
+  updatedAt                               DateTime @updatedAt
+}
