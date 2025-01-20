@@ -40,6 +40,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
+import DeleteGithubData from '@/app/_components/particular-page-components/DeleteGithubData';
 
 
 const Page = () => {
@@ -329,9 +330,15 @@ const Page = () => {
     <>
       <div className="px-2 lg:px-8 py-3 lg:py-6">
 
-        <h1 className="text-2xl lg:text-3xl text-center lg:text-left font-extrabold text-transparent bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 bg-clip-text mb-6">
-          GitHub Data Details
-        </h1>
+        <div className='flex flex-col gap-1 lg:flex-row items-center lg:justify-between mb-6 lg:mb-2'>
+
+          <h1 className="text-2xl lg:text-3xl text-center lg:text-left font-extrabold text-transparent bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 bg-clip-text mb-6">
+            GitHub Data Details
+          </h1>
+
+          <DeleteGithubData itemId={id} />
+
+        </div>
 
 
         <div className="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 p-6 rounded-lg shadow-lg">
