@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 
 import { GenerateEmailModel } from '@/generate-personalized-email';
 
+export const maxDuration = 50;
+
 
 export async function POST(req) {
 
