@@ -303,7 +303,7 @@ const Page = () => {
 
         <TbMoodEmpty className="size-16 text-orange-500" />
 
-        <p className="text-lg text-orange-500">No data found. Please create one.</p>
+        <p className="text-lg text-orange-500">Something went wrong or any data with the given ID does not exist.</p>
 
       </div>
 
