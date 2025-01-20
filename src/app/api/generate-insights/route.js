@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 
 import { GenerateInightsModel } from '@/generate-insights-gemini-model';
 
+export const maxDuration = 50;
 
 export async function POST(req) {
 
