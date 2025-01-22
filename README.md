@@ -36,6 +36,8 @@ LeadRanker is a full-stack web application designed to help organizations and co
 - 📝 **React Markdown**: For rendering markdown content.
 - 📋 **React Hook Form**: For efficient and flexible form management.
 - ✅ **Zod Validation**: For validating form inputs and ensuring data integrity.
+- 🗄️ **Prisma ORM**: For database interaction and management.
+- 🛢️ **Neon PostgreSQL Database**: For reliable and scalable data storage.
 
 ---
 
